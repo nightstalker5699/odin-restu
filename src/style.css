@@ -1,0 +1,71 @@
+body{
+    padding:0;
+    margin:0;
+    height: 100vh;
+    background-image:url(https://images.unsplash.com/photo-1626082915404-d5143f14b43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2128&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.content {
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+
+}
+.icon {
+    height: 3rem;
+    width: 3rem;
+    vertical-align: middle;
+    margin-right: 1rem;
+}
+.phoneicon {
+    height: 3rem;
+    width: 3rem;
+    vertical-align: middle;
+    
+}
+.num {
+    vertical-align: middle;
+    display: inline; }
+ 
+
+footer ,header {
+    height: 3rem;
+    background-color: rgb(20,20,20,0.5);
+    text-align: center;
+    color:white;
+    font-size: 1.5rem;
+    padding:10px;
+    box-sizing: border-box;
+}
+header{
+    font-family: 'Fuggles', cursive;
+    height: 5rem;
+    font-size: 3rem;
+    margin-bottom: 4rem;
+}
+.body {
+    flex:1;
+}
+.btngroup {
+    display: flex;
+    justify-content: center;
+    gap:10rem
+}
+
+.secondhalf {
+    display:flex;
+    justify-content: center;
+}
+
+.home, .menu , .contact {
+    text-align: center;
+    width: 50vw;
+    padding:2rem;
+    color:aliceblue;
+    background-color: rgb(20,20,20,0.5);
+    margin:3.2rem;
+    font-size: 2rem;
+    font-family: 'Croissant One', cursive;
+}
