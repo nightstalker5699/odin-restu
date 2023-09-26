@@ -8,7 +8,7 @@ function contact(){
     addressIcon.src = icon2
     addressIcon.className = "phoneicon"
     const contactCON = document.createElement("div")
-    contactCON.classList = "contact"
+    contactCON.classList.add("contact","hidden")
     const phone = document.createElement("div")
     phone.innerHTML = `<h1>Phone number </h1>
                         <div class = "num">0115-2345-5968 </div>`

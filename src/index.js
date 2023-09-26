@@ -1,9 +1,10 @@
 import  "./style.css"
 import "./button.css"
+import "./menu-item.css"
 import {home,toggle} from "./home.js"
 import {contact} from "./contact"
+import {Menu} from "./Menu"
 import icon from "./assets/burger.png"
-
 const content = document.querySelector(".content")
 
 const header = document.createElement("header")
@@ -31,14 +32,14 @@ btnGroup.innerHTML = `<a  data-but = "home" class="button" href="#" style="--col
 <span></span>
 Home
 </a>
-<a data-but = "Menu" class="button" href="#" style="--color: gray;">
+<a data-but = "menu" class="button" href="#" style="--color: gray;">
 <span></span>
 <span></span>
 <span></span>
 <span></span>
 Menu
 </a>
-<a data-but = "Contact" class="button" href="#" style="--color: gray;">
+<a data-but = "contact" class="button" href="#" style="--color: gray;">
 <span></span>
 <span></span>
 <span></span>
@@ -48,7 +49,9 @@ body.append(btnGroup,second)
 
 content.append(header,body,footer)
 contact();
-home()
+home();
+Menu();
+
 document.querySelectorAll(".button").forEach((btn)=>{
     btn.addEventListener("click",(event)=>{
         switchTab(event.target.dataset.but)
@@ -56,5 +59,16 @@ document.querySelectorAll(".button").forEach((btn)=>{
 })
 
 function switchTab(tab){
-    
+    const contact = document.querySelector(".contact")
+    const home = document.querySelector(".home")
+    const menu = document.querySelector(".menu")
+    for(const block of [contact,home,menu]) {
+        if (block.classList.contains(tab)){
+        block.classList.remove("hidden")
+        }
+       
+       else {
+        block.classList.add("hidden")
+       }
+    }
 }
